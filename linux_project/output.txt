@@ -1,0 +1,109 @@
+Last login: Wed Jan  3 12:01:26 2024 from 192.168.62.96
+ubuntu@ip-172-31-32-201:~$ sudo su
+root@ip-172-31-32-201:/home/ubuntu# vi internsctl
+root@ip-172-31-32-201:/home/ubuntu# internsctl --version
+internsctl v0.1.0
+root@ip-172-31-32-201:/home/ubuntu# internsctl cpu getinfo
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+Address sizes:                      46 bits physical, 48 bits virtual
+CPU(s):                             1
+On-line CPU(s) list:                0
+Thread(s) per core:                 1
+Core(s) per socket:                 1
+Socket(s):                          1
+NUMA node(s):                       1
+Vendor ID:                          GenuineIntel
+CPU family:                         6
+Model:                              63
+Model name:                         Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+Stepping:                           2
+CPU MHz:                            2400.224
+BogoMIPS:                           4800.03
+Hypervisor vendor:                  Xen
+Virtualization type:                full
+L1d cache:                          32 KiB
+L1i cache:                          32 KiB
+L2 cache:                           256 KiB
+L3 cache:                           30 MiB
+NUMA node0 CPU(s):                  0
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                 Mitigation; PTE Inversion
+Vulnerability Mds:                  Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+Vulnerability Meltdown:             Mitigation; PTI
+Vulnerability Mmio stale data:      Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Vulnerable
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Retpolines, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush m
+                                    mx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpu
+                                    id tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe po
+                                    pcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fa
+                                    ult invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+root@ip-172-31-32-201:/home/ubuntu# internsctl memory getinfo
+              total        used        free      shared  buff/cache   available
+Mem:          954Mi       143Mi       492Mi       0.0Ki       317Mi       655Mi
+Swap:            0B          0B          0B
+root@ip-172-31-32-201:/home/ubuntu# internsctl user create Rahul
+useradd: user 'Rahul' already exists
+New password:
+Retype new password:
+passwd: password updated successfully
+root@ip-172-31-32-201:/home/ubuntu#  internsctl user list
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+ubuntu
+lxd
+Bamb Jatt
+root@ip-172-31-32-201:/home/ubuntu#  internsctl user list --sudo-only
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+ubuntu
+lxd
+Bamb Jatt
+root@ip-172-31-32-201:/home/ubuntu# cd /usr/local/bin/
+root@ip-172-31-32-201:/usr/local/bin#
